@@ -1,0 +1,53 @@
+sql 语句
+
+show databases;
+use o2o;
+create table tb_area(
+	area_id int(2) NOT NULL AUTO_INCREMENT,
+	area_name varchar(200) NOT NULL,
+	priority int(2) NOT NULL DEFAULT 0,
+	createTime datetime DEFAULT NULL,
+	lastUpdateTime datetime DEFAULT NULL,
+	primary key(area_id),
+	unique key UK_AREA(area_name)	
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+注：ENGINE有两种InnoDB和MyISAM， 区别是
+InnoDB：一个线程访问表单时，其他线程无法访问前一个线程访问的那一行数据，其它行是可以访问的, 写的略快
+MyISAM：一个线程访问表单时，其他线程无法访问，读取速度远大于InnoDB
+
+create table tb_person_info(
+	user_id int(10) NOT NULL AUTO_INCREMENT,
+    name varchar(32) DEFAULT NULL,
+    profile_img varchar(1024) DEFAULT NULL,
+    email varchar(1024) DEFAULT NULL,
+    gender varchar(2) DEFAULT NULL,
+    enable_status int(2) NOT NULL DEFAULT 0 COMMENT '0:banned, 1:allowed',
+    user_type int(2) NOT NULL DEFAULT 1 COMMENT '1:customer, 2:saler, 3;supervisor',
+    create_time datetime DEFAULT NULL,
+    last_update_time datetime DEFAULT NULL,
+    primary key(user_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+create table tb_wechat_auth(
+	wechat_auth_id int(10) NOT NULL AUTO_INCREMENT,
+    user_id int(10) NOT NULL,
+    open_id varchar(1024) NOT NULL,
+    create_time datetime DEFAULT NULL,
+    primary key(wechat_auth_id),
+    constraint fk_wechatauth_profile foreign key(user_id) references tb_person_info(user_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+create table tb_local_auth(
+	local_auth_id int(10) NOT NULL AUTO_INCREMENT,
+    user_id int(10) NOT NULL,
+    username varchar(128) NOT NULL,
+    password varchar(128) NOT NULL,
+    create_time datetime DEFAULT NULL,
+    last_update_time datetime DEFAULT NULL,
+    primary key(local_auth_id),
+    unique key UK_LOCAL_PROFILE(username),
+    constraint fk_localauth_profile foreign key(user_id) references tb_person_info(user_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+alter table tb_wechat_auth add unique index(open_id);
+注：索引可以加快查询性能，就像查字典可以通过偏旁部首加快查询速度一样，但是过多的索引会降低查询速度，这是因为索引是需要维护的
