@@ -4,6 +4,16 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
 <mapper namespace="edu.scu.xyl.dao.AreaDao">
+
+	<resultMap id="BaseResultMap" type="edu.scu.xyl.entity.Area">
+        <id column="area_id" property="area_id" jdbcType="INTEGER" />
+        <result column="area_name" property="area_name" jdbcType="VARCHAR" />
+        <result column="priority" property="priority" jdbcType="INTEGER" />
+        <result column="createTime" property="createTime" jdbcType="VARCHAR" />
+        <result column="lastUpdateTime" property="lastUpdateTime" jdbcType="DATE" />
+    </resultMap>
+    
+    
 	<select id="queryArea" resultType="edu.scu.xyl.entity.Area">
 		SELECT area_id, area_name, priority, createTime, lastUpdateTime
 		FROM tb_area
