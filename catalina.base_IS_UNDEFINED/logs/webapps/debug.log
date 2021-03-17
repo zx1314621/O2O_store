@@ -1,0 +1,9 @@
+2021-03-16 10:56:39.740[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_desc = ?, shop_addr = ?, last_update_time = ? WHERE shop_id = ? 
+2021-03-16 10:56:39.771[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试Dylan(String), 测试Address(String), 2021-03-16 10:56:39.414(Timestamp), 3(Long)
+2021-03-16 10:56:39.791[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
+2021-03-16 10:57:08.249[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_desc = ?, shop_addr = ?, last_update_time = ? WHERE shop_id = ? 
+2021-03-16 10:57:08.275[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试Dylan(String), 测试Address(String), 2021-03-16 10:57:07.99(Timestamp), 1(Long)
+2021-03-16 10:57:08.277[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
+2021-03-16 10:59:00.530[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_desc = ?, shop_addr = ?, last_update_time = ? WHERE shop_id = ? 
+2021-03-16 10:59:00.595[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试Dylan(String), 测试Address(String), 2021-03-16 10:59:00.043(Timestamp), 1(Long)
+2021-03-16 10:59:00.598[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
