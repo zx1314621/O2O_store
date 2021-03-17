@@ -55,6 +55,7 @@ public class ImageUtil {
 		} catch (IOException e) {
 			logger.error(e.toString());
 			e.printStackTrace();
+			throw new RuntimeException("create Thumbnails failed" + e.toString());
 		}
 		return relativeAddr;
 	}

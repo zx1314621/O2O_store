@@ -1,9 +1,72 @@
-2021-03-16 10:56:39.740[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_desc = ?, shop_addr = ?, last_update_time = ? WHERE shop_id = ? 
-2021-03-16 10:56:39.771[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试Dylan(String), 测试Address(String), 2021-03-16 10:56:39.414(Timestamp), 3(Long)
-2021-03-16 10:56:39.791[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
-2021-03-16 10:57:08.249[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_desc = ?, shop_addr = ?, last_update_time = ? WHERE shop_id = ? 
-2021-03-16 10:57:08.275[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试Dylan(String), 测试Address(String), 2021-03-16 10:57:07.99(Timestamp), 1(Long)
-2021-03-16 10:57:08.277[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
-2021-03-16 10:59:00.530[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_desc = ?, shop_addr = ?, last_update_time = ? WHERE shop_id = ? 
-2021-03-16 10:59:00.595[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试Dylan(String), 测试Address(String), 2021-03-16 10:59:00.043(Timestamp), 1(Long)
-2021-03-16 10:59:00.598[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
+2021-03-17 15:57:31.137[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 15:57:31.176[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 15:57:31.12(Timestamp), 2021-03-17 15:57:31.121(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 15:57:31.198[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 15:57:31.219[main] DEBUG edu.scu.xyl.util.ImageUtil - current relativeAddr is:/upload/item/shop/4/2021031715573151031.jpg
+2021-03-17 15:57:31.220[main] DEBUG edu.scu.xyl.util.ImageUtil - current completeAddr is:/Users/dylan/Desktop/coding/image//upload/item/shop/4/2021031715573151031.jpg
+2021-03-17 15:57:31.445[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name = ?, shop_desc = ?, shop_addr = ?, phone = ?, shop_img = ?, last_update_time = ?, enable_status = ?, advice = ?, shop_category_id = ?, area_id = ? WHERE shop_id = ? 
+2021-03-17 15:57:31.446[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺1(String), test1(String), test1(String), test1(String), /upload/item/shop/4/2021031715573151031.jpg(String), 2021-03-17 15:57:31.121(Timestamp), 0(Integer), 审核中(String), 1(Long), 2(Integer), 4(Long)
+2021-03-17 15:57:31.449[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
+2021-03-17 16:02:19.481[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:02:19.510[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:02:19.466(Timestamp), 2021-03-17 16:02:19.466(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:02:19.512[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:02:19.524[main] DEBUG edu.scu.xyl.util.ImageUtil - current relativeAddr is:upload/item/shop/5/2021031716021997512.jpg
+2021-03-17 16:02:19.524[main] DEBUG edu.scu.xyl.util.ImageUtil - current completeAddr is:/Users/dylan/Desktop/coding/image/upload/item/shop/5/2021031716021997512.jpg
+2021-03-17 16:02:19.686[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name = ?, shop_desc = ?, shop_addr = ?, phone = ?, shop_img = ?, last_update_time = ?, enable_status = ?, advice = ?, shop_category_id = ?, area_id = ? WHERE shop_id = ? 
+2021-03-17 16:02:19.686[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺1(String), test1(String), test1(String), test1(String), upload/item/shop/5/2021031716021997512.jpg(String), 2021-03-17 16:02:19.466(Timestamp), 0(Integer), 审核中(String), 1(Long), 2(Integer), 5(Long)
+2021-03-17 16:02:19.687[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
+2021-03-17 16:02:58.831[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:02:58.861[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:02:58.815(Timestamp), 2021-03-17 16:02:58.815(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:02:58.862[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:02:58.875[main] DEBUG edu.scu.xyl.util.ImageUtil - current relativeAddr is:upload/item/shop/6/2021031716025849898.jpg
+2021-03-17 16:02:58.875[main] DEBUG edu.scu.xyl.util.ImageUtil - current completeAddr is:/Users/dylan/Desktop/coding/image/upload/item/shop/6/2021031716025849898.jpg
+2021-03-17 16:03:00.857[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name = ?, shop_desc = ?, shop_addr = ?, phone = ?, shop_img = ?, last_update_time = ?, enable_status = ?, advice = ?, shop_category_id = ?, area_id = ? WHERE shop_id = ? 
+2021-03-17 16:03:00.858[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺1(String), test1(String), test1(String), test1(String), upload/item/shop/6/2021031716025849898.jpg(String), 2021-03-17 16:02:58.815(Timestamp), 0(Integer), 审核中(String), 1(Long), 2(Integer), 6(Long)
+2021-03-17 16:03:00.859[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
+2021-03-17 16:08:18.634[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:08:18.668[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺2(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:08:18.616(Timestamp), 2021-03-17 16:08:18.616(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:08:18.670[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:09:19.100[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:09:19.139[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺2(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:09:19.086(Timestamp), 2021-03-17 16:09:19.086(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:09:19.141[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:12:03.522[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:12:03.551[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺2(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:12:03.509(Timestamp), 2021-03-17 16:12:03.509(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:12:03.553[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:12:52.278[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:12:52.305[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺2(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:12:52.265(Timestamp), 2021-03-17 16:12:52.265(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:12:52.306[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:12:52.319[main] DEBUG edu.scu.xyl.util.ImageUtil - current relativeAddr is:upload/item/shop/10/2021031716125251812.jpg
+2021-03-17 16:12:52.319[main] DEBUG edu.scu.xyl.util.ImageUtil - current completeAddr is:/Users/dylan/Desktop/coding/image/upload/item/shop/10/2021031716125251812.jpg
+2021-03-17 16:12:53.735[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name = ?, shop_desc = ?, shop_addr = ?, phone = ?, shop_img = ?, last_update_time = ?, enable_status = ?, advice = ?, shop_category_id = ?, area_id = ? WHERE shop_id = ? 
+2021-03-17 16:12:53.736[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺2(String), test1(String), test1(String), test1(String), upload/item/shop/10/2021031716125251812.jpg(String), 2021-03-17 16:12:52.265(Timestamp), 0(Integer), 审核中(String), 1(Long), 2(Integer), 10(Long)
+2021-03-17 16:12:53.737[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
+2021-03-17 16:14:46.727[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:14:46.758[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:14:46.713(Timestamp), 2021-03-17 16:14:46.713(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:14:46.760[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:14:46.775[main] DEBUG edu.scu.xyl.util.ImageUtil - current relativeAddr is:upload/item/shop/11/2021031716144674562.jpg
+2021-03-17 16:14:46.775[main] DEBUG edu.scu.xyl.util.ImageUtil - current completeAddr is:/Users/dylan/Desktop/coding/image/upload/item/shop/11/2021031716144674562.jpg
+2021-03-17 16:14:46.960[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name = ?, shop_desc = ?, shop_addr = ?, phone = ?, shop_img = ?, last_update_time = ?, enable_status = ?, advice = ?, shop_category_id = ?, area_id = ? WHERE shop_id = ? 
+2021-03-17 16:14:46.960[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺1(String), test1(String), test1(String), test1(String), upload/item/shop/11/2021031716144674562.jpg(String), 2021-03-17 16:14:46.713(Timestamp), 0(Integer), 审核中(String), 1(Long), 2(Integer), 11(Long)
+2021-03-17 16:14:46.961[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
+2021-03-17 16:19:13.919[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:19:13.951[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:19:13.904(Timestamp), 2021-03-17 16:19:13.904(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:19:13.952[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:19:13.967[main] DEBUG edu.scu.xyl.util.ImageUtil - current relativeAddr is:upload/item/shop/12/2021031716191335506.jpg
+2021-03-17 16:19:13.967[main] DEBUG edu.scu.xyl.util.ImageUtil - current completeAddr is:/Users/dylan/Desktop/coding/image/upload/item/shop/12/2021031716191335506.jpg
+2021-03-17 16:20:03.391[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:20:03.421[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:20:03.376(Timestamp), 2021-03-17 16:20:03.376(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:20:03.422[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:20:03.436[main] DEBUG edu.scu.xyl.util.ImageUtil - current relativeAddr is:upload/item/shop/13/2021031716200365332.jpg
+2021-03-17 16:20:03.436[main] DEBUG edu.scu.xyl.util.ImageUtil - current completeAddr is:/Users/dylan/Desktop/coding/image/upload/item/shop/13/2021031716200365332.jpg
+2021-03-17 16:25:33.924[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:25:33.954[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:25:33.912(Timestamp), 2021-03-17 16:25:33.912(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:25:33.955[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:25:33.969[main] DEBUG edu.scu.xyl.util.ImageUtil - current relativeAddr is:upload/item/shop/14/2021031716253339681.jpg
+2021-03-17 16:25:33.969[main] DEBUG edu.scu.xyl.util.ImageUtil - current completeAddr is:/Users/dylan/Desktop/coding/image/upload/item/shop/14/2021031716253339681.jpg
+2021-03-17 16:26:11.900[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-17 16:26:11.927[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, null, 2021-03-17 16:26:11.886(Timestamp), 2021-03-17 16:26:11.886(Timestamp), 0(Integer), 审核中(String)
+2021-03-17 16:26:11.928[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-17 16:26:11.940[main] DEBUG edu.scu.xyl.util.ImageUtil - current relativeAddr is:upload/item/shop/15/2021031716261112552.jpg
+2021-03-17 16:26:11.940[main] DEBUG edu.scu.xyl.util.ImageUtil - current completeAddr is:/Users/dylan/Desktop/coding/image/upload/item/shop/15/2021031716261112552.jpg
+2021-03-17 16:26:13.439[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name = ?, shop_desc = ?, shop_addr = ?, phone = ?, shop_img = ?, last_update_time = ?, enable_status = ?, advice = ?, shop_category_id = ?, area_id = ? WHERE shop_id = ? 
+2021-03-17 16:26:13.440[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺1(String), test1(String), test1(String), test1(String), upload/item/shop/15/2021031716261112552.jpg(String), 2021-03-17 16:26:11.886(Timestamp), 0(Integer), 审核中(String), 1(Long), 2(Integer), 15(Long)
+2021-03-17 16:26:13.441[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1

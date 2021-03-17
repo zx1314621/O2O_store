@@ -2,7 +2,7 @@ package edu.scu.xyl.enums;
 
 public enum ShopStateEnum {
 	CHECK(0, "In the review"), OFFLINE(-1, "Illegal"), SUCCESS(1, "Suceess"), PASS(2, "Pass"),
-	INNER_ERROR(-1001, "Inner error"), NULL_SHOPID(-1002, "Empty shopId");
+	INNER_ERROR(-1001, "Inner error"), NULL_SHOPID(-1002, "Empty shopId"), NULL_SHOP(-1003, "shop is null");
 
 	private int state;
 	private String stateInfo;
