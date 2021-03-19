@@ -80,7 +80,7 @@ public class ImageUtil {
 	 * 
 	 * @return
 	 */
-	private static String getRandomFileName() {
+	public static String getRandomFileName() {
 		// guarantee five digits
 		int rannum = rd.nextInt(90000) + 10000;
 		String nowTimeStr = sDateFormat.format(new Date());
