@@ -2,6 +2,7 @@ package edu.scu.xyl.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -39,9 +40,9 @@ public class ImageUtil {
 	 * @param targetAddr
 	 * @return
 	 */
-	public static String generateThumbnail(/*CommonsMultipartFile*/File thumbnail, String targetAddr) {
+	public static String generateThumbnail(/*CommonsMultipartFile*/InputStream thumbnailInputStream, String fileName, String targetAddr) {
 		String realFileName = getRandomFileName();
-		String extension = getFileExtension(thumbnail);
+		String extension = getFileExtension(fileName);
 		makeDirPath(targetAddr);
 		String relativeAddr = targetAddr + realFileName + extension;
 		File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
@@ -49,7 +50,7 @@ public class ImageUtil {
 		logger.debug("current completeAddr is:" + PathUtil.getImgBasePath() + relativeAddr);
 		try {
 			//Thumbnails.of(thumbnail.getInputStream()).size(200, 200)
-			Thumbnails.of(thumbnail).size(200, 200)
+			Thumbnails.of(thumbnailInputStream).size(200, 200)
 					.watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/watermark.jpg")), 0.25f)
 					.outputQuality(0.8f).toFile(dest);
 		} catch (IOException e) {
@@ -89,10 +90,9 @@ public class ImageUtil {
 		
 	}
 	
-	private static String getFileExtension(/*CommonsMultipartFile*/File cFile) {
+	private static String getFileExtension(/*CommonsMultipartFile*/String fileName) {
 //		String originalFileName = cFile.getOriginalFilename();
-		String originalFileName = cFile.getName();
-		return originalFileName.substring(originalFileName.lastIndexOf("."));
+		return fileName.substring(fileName.lastIndexOf("."));
 	}
 
 	public static void main(String[] args) throws IOException {

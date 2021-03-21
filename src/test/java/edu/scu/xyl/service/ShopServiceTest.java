@@ -3,6 +3,9 @@ package edu.scu.xyl.service;
 import static org.junit.Assert.assertEquals;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Date;
 
 import org.junit.Test;
@@ -22,7 +25,7 @@ public class ShopServiceTest extends BaseTest{
 	private ShopService shopService;
 	
 	@Test
-	public void testAddShop() {
+	public void testAddShop() throws FileNotFoundException {
 		Shop shop = new Shop();
 		PersonInfo owner = new PersonInfo();
 		Area area = new Area();
@@ -33,7 +36,7 @@ public class ShopServiceTest extends BaseTest{
 		shop.setOwner(owner);
 		shop.setArea(area);
 		shop.setShopCategory(shopCategory);
-		shop.setShop_name("测试的店铺1");
+		shop.setShop_name("测试的店铺3");
 		shop.setShop_desc("test1");
 		shop.setShop_addr("test1");
 		shop.setPhone("test1");
@@ -42,7 +45,8 @@ public class ShopServiceTest extends BaseTest{
 		shop.setAdvice("审核中");
 		
 		File shopImg = new File("/Users/dylan/Desktop/coding/TestLeetCode/image/yosemite.jpg");
-		ShopExecution se = shopService.addShop(shop, shopImg);
+		InputStream is = new FileInputStream(shopImg);
+		ShopExecution se = shopService.addShop(shop, is,shopImg.getName());
 		assertEquals(ShopStateEnum.CHECK.getState(), se.getState());
 	}
 }
