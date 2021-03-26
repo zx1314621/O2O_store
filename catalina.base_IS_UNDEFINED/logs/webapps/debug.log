@@ -6,3 +6,11 @@
 2021-03-21 15:35:22.598[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name = ?, shop_desc = ?, shop_addr = ?, phone = ?, shop_img = ?, last_update_time = ?, enable_status = ?, advice = ?, shop_category_id = ?, area_id = ? WHERE shop_id = ? 
 2021-03-21 15:35:22.598[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺3(String), test1(String), test1(String), test1(String), upload/item/shop/16/2021032115352023417.jpg(String), 2021-03-21 15:35:20.728(Timestamp), 0(Integer), 审核中(String), 1(Long), 2(Integer), 16(Long)
 2021-03-21 15:35:22.601[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
+2021-03-25 15:03:53.595[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_update_time, enable_status, advice) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2021-03-25 15:03:53.628[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺3(String), test1(String), test1(String), test1(String), null, null, 2021-03-25 15:03:53.576(Timestamp), 2021-03-25 15:03:53.576(Timestamp), 0(Integer), 审核中(String)
+2021-03-25 15:03:53.652[main] DEBUG edu.scu.xyl.dao.ShopDao.insertShop - <==    Updates: 1
+2021-03-25 15:03:53.669[main] DEBUG edu.scu.xyl.util.ImageUtil - current relativeAddr is:upload/item/shop/17/2021032515035396984.jpg
+2021-03-25 15:03:53.669[main] DEBUG edu.scu.xyl.util.ImageUtil - current completeAddr is:/Users/dylan/Desktop/coding/image/upload/item/shop/17/2021032515035396984.jpg
+2021-03-25 15:03:56.458[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name = ?, shop_desc = ?, shop_addr = ?, phone = ?, shop_img = ?, last_update_time = ?, enable_status = ?, advice = ?, shop_category_id = ?, area_id = ? WHERE shop_id = ? 
+2021-03-25 15:03:56.459[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺3(String), test1(String), test1(String), test1(String), upload/item/shop/17/2021032515035396984.jpg(String), 2021-03-25 15:03:53.576(Timestamp), 0(Integer), 审核中(String), 1(Long), 2(Integer), 17(Long)
+2021-03-25 15:03:56.464[main] DEBUG edu.scu.xyl.dao.ShopDao.updateShop - <==    Updates: 1
