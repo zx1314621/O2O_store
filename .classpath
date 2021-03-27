@@ -6,11 +6,12 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="src/main/webapp/resources/js/shop"/>
 	<classpathentry kind="src" path="src/main/webapp/resources/css/common"/>
 	<classpathentry kind="src" path="src/main/webapp/resources/js/common"/>
 	<classpathentry excluding="common/" kind="src" path="src/main/webapp/resources/css"/>
-	<classpathentry excluding="common/" kind="src" path="src/main/webapp/resources/js"/>
-	<classpathentry excluding="css/|js/|css/common/|js/common/" kind="src" path="src/main/webapp/resources"/>
+	<classpathentry excluding="common/|shop/" kind="src" path="src/main/webapp/resources/js"/>
+	<classpathentry excluding="css/|js/|css/common/|js/common/|js/shop/" kind="src" path="src/main/webapp/resources"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
 			<attribute name="test" value="true"/>

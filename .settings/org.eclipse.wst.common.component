@@ -12,6 +12,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/js"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/css/common"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/js/common"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/js/shop"/>
         <property name="context-root" value="O2O"/>
         <property name="java-output-path" value="/O2O/target/classes"/>
     </wb-module>

@@ -5,7 +5,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,10 +24,14 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import edu.scu.xyl.dto.ShopExecution;
+import edu.scu.xyl.entity.Area;
 import edu.scu.xyl.entity.PersonInfo;
 import edu.scu.xyl.entity.Shop;
+import edu.scu.xyl.entity.ShopCategory;
 import edu.scu.xyl.enums.ShopStateEnum;
 import edu.scu.xyl.exceptions.ShopOperationException;
+import edu.scu.xyl.service.AreaService;
+import edu.scu.xyl.service.ShopCategoryService;
 import edu.scu.xyl.service.ShopService;
 import edu.scu.xyl.util.HttpServletRequestUtil;
 import edu.scu.xyl.util.ImageUtil;
@@ -36,10 +42,34 @@ import edu.scu.xyl.util.PathUtil;
 public class ShopManagementController {
 	@Autowired
 	private ShopService shopService;
+	@Autowired
+	private ShopCategoryService shopCategoryService;
+	@Autowired
+	private AreaService areaService;
+
+	@RequestMapping(value = "/getshopinitinfo", method = RequestMethod.GET)
+	@ResponseBody
+	private Map<String, Object> getShopInitInfo() {
+		Map<String, Object> modelMap = new HashMap<>();
+		List<ShopCategory> shopCategoryList = new ArrayList<>();
+		List<Area> areaList = new ArrayList<>();
+		try {
+			shopCategoryList = shopCategoryService.getShopCategoryList(new ShopCategory());
+			areaList = areaService.getAreaList();
+			modelMap.put("success", true);
+			modelMap.put("shopCategoryList", shopCategoryList);
+			modelMap.put("areaList", areaList);
+		} catch (Exception e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.getMessage());
+		}
+		
+		return modelMap;
+	}
 	@RequestMapping(value = "/registershop", method = RequestMethod.POST)
 	@ResponseBody
-	private Map<String, Object> registerShop(HttpServletRequest request){
-		
+	private Map<String, Object> registerShop(HttpServletRequest request) {
+
 		Map<String, Object> modelMap = new HashMap<>();
 		// 1. accept and transfer parameters
 		String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
@@ -52,13 +82,13 @@ public class ShopManagementController {
 			modelMap.put("errMsg", e.getMessage());
 			return modelMap;
 		}
-		
+
 		CommonsMultipartFile shopImg = null;
 		CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver(
 				request.getSession().getServletContext());
 		if (commonsMultipartResolver.isMultipart(request)) {
-			MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest)request;
-			shopImg = (CommonsMultipartFile)multipartHttpServletRequest.getFile("shopImg");
+			MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
+			shopImg = (CommonsMultipartFile) multipartHttpServletRequest.getFile("shopImg");
 		} else {
 			modelMap.put("success", false);
 			modelMap.put("errMsg", "shopimg cannot be empty");
@@ -67,10 +97,10 @@ public class ShopManagementController {
 		// 2. register shop
 		if (shop != null && shopImg != null) {
 			PersonInfo owner = new PersonInfo();
-			//session TODO
+			// session TODO
 			owner.setUser_id(1L);
 			shop.setOwner(owner);
-			
+
 			ShopExecution se;
 			try {
 				se = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
@@ -87,17 +117,17 @@ public class ShopManagementController {
 				modelMap.put("success", false);
 				modelMap.put("errMsg", e.getMessage());
 			}
-			
+
 			return modelMap;
 		} else {
 			modelMap.put("success", false);
 			modelMap.put("errMsg", "please enter shop information");
 			return modelMap;
 		}
-		
+
 		// return result
 	}
-	
+
 //	private static void InputStreamToFile(InputStream ins, File file) {
 //		FileOutputStream os = null;
 //		try {
