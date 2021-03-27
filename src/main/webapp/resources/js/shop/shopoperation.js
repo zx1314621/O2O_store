@@ -44,8 +44,14 @@ $(function(){
 			var formData = new FormData();
 			formData.append('shopImg', shopImg);
 			formData.append('shopStr', JSON.stringify(shop));
+			var verifyCodeActual = $('#j-captcha').val();
+			if (!verifyCodeActual) {
+				$.toast('Please Input Verification Code');
+				return;
+			}
+			formData.append('verifyCodeActual', verifyCodeActual);
 			$.ajax({
-				url:registershop,
+				url:registerShopUrl,
 				type:'POST',
 				data: formData,
 				contentType:false,
@@ -57,6 +63,7 @@ $(function(){
 					} else {
 						$.toast('submit failed!' + data.errMsg);
 					}
+					$('#captcha-img').click();
 				}
 			});
 		});

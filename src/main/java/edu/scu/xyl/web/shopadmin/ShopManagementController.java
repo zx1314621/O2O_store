@@ -33,6 +33,7 @@ import edu.scu.xyl.exceptions.ShopOperationException;
 import edu.scu.xyl.service.AreaService;
 import edu.scu.xyl.service.ShopCategoryService;
 import edu.scu.xyl.service.ShopService;
+import edu.scu.xyl.util.CodeUtil;
 import edu.scu.xyl.util.HttpServletRequestUtil;
 import edu.scu.xyl.util.ImageUtil;
 import edu.scu.xyl.util.PathUtil;
@@ -63,14 +64,20 @@ public class ShopManagementController {
 			modelMap.put("success", false);
 			modelMap.put("errMsg", e.getMessage());
 		}
-		
+
 		return modelMap;
 	}
+
 	@RequestMapping(value = "/registershop", method = RequestMethod.POST)
 	@ResponseBody
 	private Map<String, Object> registerShop(HttpServletRequest request) {
 
 		Map<String, Object> modelMap = new HashMap<>();
+		if (!CodeUtil.checkVerifyCode(request)) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "wrong verification code");
+			return modelMap;
+		}
 		// 1. accept and transfer parameters
 		String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
 		ObjectMapper mapper = new ObjectMapper();
