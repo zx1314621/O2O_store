@@ -15,8 +15,8 @@ $(function(){
 					+item.shopCategoryName + '</option>';
 				});
 				data.areaList.map(function(item, index){
-					tempAreaHtml += '<option data-id="' + item.areaId + '">' 
-					+item.areaName + '</option>';
+					tempAreaHtml += '<option data-id="' + item.area_id + '">' 
+					+item.area_name + '</option>';
 				});
 				$('#shop-category').html(tempHtml);
 				$('#shop-area').html(tempAreaHtml);

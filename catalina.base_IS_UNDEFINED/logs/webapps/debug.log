@@ -1,15 +1,36 @@
-2021-03-26 19:49:22.019[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_update_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-2021-03-26 19:49:22.043[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2021-03-26 19:49:22.063[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-2021-03-26 19:51:41.397[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_update_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-2021-03-26 19:51:41.420[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2021-03-26 19:51:41.440[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2021-03-26 19:51:53.521[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_update_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-2021-03-26 19:51:53.542[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2021-03-26 19:51:53.561[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2021-03-26 19:54:19.821[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_update_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-2021-03-26 19:54:19.844[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2021-03-26 19:54:19.863[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2021-03-26 19:54:19.872[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_update_time, parent_id FROM tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2021-03-26 19:54:19.872[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
-2021-03-26 19:54:19.874[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2021-03-27 10:10:51.064[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, createTime, lastUpdateTime FROM tb_area ORDER BY priority DESC 
+2021-03-27 10:10:51.092[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==> Parameters: 
+2021-03-27 10:10:51.112[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - <==      Total: 2
+2021-03-27 10:13:24.321[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, createTime, lastUpdateTime FROM tb_area ORDER BY priority DESC 
+2021-03-27 10:13:24.344[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==> Parameters: 
+2021-03-27 10:13:24.362[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - <==      Total: 2
+2021-03-27 10:17:21.849[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, createTime, lastUpdateTime FROM tb_area ORDER BY priority DESC 
+2021-03-27 10:17:21.872[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==> Parameters: 
+2021-03-27 10:17:21.892[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - <==      Total: 2
+2021-03-27 10:19:26.619[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, createTime, lastUpdateTime FROM tb_area ORDER BY priority DESC 
+2021-03-27 10:19:26.661[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==> Parameters: 
+2021-03-27 10:19:26.688[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - <==      Total: 2
+2021-03-27 10:23:10.796[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, createTime, lastUpdateTime FROM tb_area ORDER BY priority DESC 
+2021-03-27 10:23:10.819[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==> Parameters: 
+2021-03-27 10:23:10.838[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - <==      Total: 2
+2021-03-27 10:27:04.603[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_update_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC 
+2021-03-27 10:27:04.626[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2021-03-27 10:27:04.646[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2021-03-27 10:27:24.530[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_update_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC 
+2021-03-27 10:27:24.552[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2021-03-27 10:27:24.574[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2021-03-27 10:27:41.714[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_update_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC 
+2021-03-27 10:27:41.736[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2021-03-27 10:27:41.754[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2021-03-27 10:28:10.394[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_update_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC 
+2021-03-27 10:28:10.415[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2021-03-27 10:28:10.433[main] DEBUG edu.scu.xyl.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2021-03-27 10:30:32.392[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, createTime, lastUpdateTime FROM tb_area ORDER BY priority DESC 
+2021-03-27 10:30:32.419[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==> Parameters: 
+2021-03-27 10:30:32.440[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - <==      Total: 2
+2021-03-27 10:30:54.220[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, createTime, lastUpdateTime FROM tb_area ORDER BY priority DESC 
+2021-03-27 10:30:54.245[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==> Parameters: 
+2021-03-27 10:30:54.263[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - <==      Total: 2
+2021-03-27 10:34:33.235[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, createTime, lastUpdateTime FROM tb_area ORDER BY priority DESC 
+2021-03-27 10:34:33.257[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - ==> Parameters: 
+2021-03-27 10:34:33.277[main] DEBUG edu.scu.xyl.dao.AreaDao.queryArea - <==      Total: 2
