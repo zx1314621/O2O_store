@@ -26,17 +26,17 @@ $(function(){
 		
 		$('#submit').click(function(){
 			var shop = {};
-			shop.shopName = $('#shop-name').val();
-			shop.shopAddr = $('#shop-addr').val();
+			shop.shop_name = $('#shop-name').val();
+			shop.shop_addr = $('#shop-addr').val();
 			shop.phone = $('#shop-phone').val();
-			shop.shopDesc = $('shop-desc').val();
+			shop.shop_desc = $('#shop-desc').val();
 			shop.shopCategory = {
 					shopCategoryId:$('#shop-category').find('option').not(function(){
 						return !this.selected;
 					}).data('id')
 			}
 			shop.area = {
-					areaId:$('#shop-area').find('option').not(function(){
+					area_id:$('#shop-area').find('option').not(function(){
 						return !this.selected
 					}).data('id')
 			};

@@ -16,6 +16,10 @@ public class Shop {
 	// -1 no 0 pending 1 yes
 	private Integer enableStatus;
 	private String advice;
+	private Area area;
+	private PersonInfo owner;
+	private ShopCategory shopCategory;
+	
 
 	public Long getShop_id() {
 		return shop_id;
@@ -129,8 +133,6 @@ public class Shop {
 		this.shopCategory = shopCategory;
 	}
 
-	private Area area;
-	private PersonInfo owner;
-	private ShopCategory shopCategory;
+	
 
 }
